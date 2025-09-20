@@ -1,6 +1,5 @@
 import csv
 
-
 def load_simulated_readings(filename: str) -> list[tuple[float, float]]:
    """
    Loads pre-recorded temperature readings from a CSV file.
@@ -21,7 +20,6 @@ def load_simulated_readings(filename: str) -> list[tuple[float, float]]:
                continue
    return readings
    
-
 try:
    import sense_hat
    use_simulated = False
@@ -30,8 +28,6 @@ except:
    use_simulated = True
    simulated_data = load_simulated_readings('simulated_data.csv') # AI allowed
    simulated_counter = 0
-   print("hi")
-
 
 def get_temperature() -> tuple[float, float]:
    """
